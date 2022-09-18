@@ -4,49 +4,49 @@ import { useEffect } from "react";
 export default function RouletteTable() {
   const [selected, setSelected] = React.useState([]);
   const [color, setColor] = React.useState("cyan-900");
-  const [individualArray, setIndividualArray] = React.useState("");
+  
   //   const numbers = [
   //     1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
   //     22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36,
   //   ];
 
   const numbers = [
-    { id: 1, num: 1, color: color },
-    { id: 2, num: 2, color: color },
-    { id: 3, num: 3, color: color },
-    { id: 4, num: 4, color: color },
-    { id: 5, num: 5, color: color },
-    { id: 6, num: 6, color: color },
-    { id: 7, num: 7, color: color },
-    { id: 8, num: 8, color: color },
-    { id: 9, num: 9, color: color },
-    { id: 10, num: 10, color: color },
-    { id: 11, num: 11, color: color },
-    { id: 12, num: 12, color: color },
-    { id: 13, num: 13, color: color },
-    { id: 14, num: 14, color: color },
-    { id: 15, num: 15, color: color },
-    { id: 16, num: 16, color: color },
-    { id: 17, num: 17, color: color },
-    { id: 18, num: 18, color: color },
-    { id: 19, num: 19, color: color },
-    { id: 20, num: 20, color: color },
-    { id: 21, num: 21, color: color },
-    { id: 22, num: 22, color: color },
-    { id: 23, num: 23, color: color },
-    { id: 24, num: 24, color: color },
-    { id: 25, num: 25, color: color },
-    { id: 26, num: 26, color: color },
-    { id: 27, num: 27, color: color },
-    { id: 28, num: 28, color: color },
-    { id: 29, num: 29, color: color },
-    { id: 30, num: 30, color: color },
-    { id: 31, num: 31, color: color },
-    { id: 32, num: 32, color: color },
-    { id: 33, num: 33, color: color },
-    { id: 34, num: 34, color: color },
-    { id: 35, num: 35, color: color },
-    { id: 36, num: 36, color: color },
+    { id: 1, num: 1, selectedState: false },
+    { id: 2, num: 2, selectedState: false },
+    { id: 3, num: 3, selectedState: false },
+    { id: 4, num: 4, selectedState: false },
+    { id: 5, num: 5, selectedState: false },
+    { id: 6, num: 6, selectedState: false },
+    { id: 7, num: 7, selectedState: false },
+    { id: 8, num: 8, selectedState: false },
+    { id: 9, num: 9, selectedState: false },
+    { id: 10, num: 10, selectedState: false },
+    { id: 11, num: 11, selectedState: false },
+    { id: 12, num: 12, selectedState: false },
+    { id: 13, num: 13, selectedState: false },
+    { id: 14, num: 14, selectedState: false },
+    { id: 15, num: 15, selectedState: false },
+    { id: 16, num: 16, selectedState: false },
+    { id: 17, num: 17, selectedState: false },
+    { id: 18, num: 18, selectedState: false },
+    { id: 19, num: 19, selectedState: false },
+    { id: 20, num: 20, selectedState: false },
+    { id: 21, num: 21, selectedState: false },
+    { id: 22, num: 22, selectedState: false },
+    { id: 23, num: 23, selectedState: false },
+    { id: 24, num: 24, selectedState: false },
+    { id: 25, num: 25, selectedState: false },
+    { id: 26, num: 26, selectedState: false },
+    { id: 27, num: 27, selectedState: false },
+    { id: 28, num: 28, selectedState: false },
+    { id: 29, num: 29, selectedState: false },
+    { id: 30, num: 30, selectedState: false },
+    { id: 31, num: 31, selectedState: false },
+    { id: 32, num: 32, selectedState: false },
+    { id: 33, num: 33, selectedState: false },
+    { id: 34, num: 34, selectedState: false },
+    { id: 35, num: 35, selectedState: false },
+    { id: 36, num: 36, selectedState: false },
   ];
 
   const endBox = ["1st", "2nd", "3rd"];
@@ -59,17 +59,11 @@ export default function RouletteTable() {
     2, 4, 6, 8, 10, 11, 13, 15, 17, 20, 22, 24, 26, 28, 29, 31, 33, 35,
   ];
 
-  //   const handleIndividualColor = (item) => {
-
-  //     if(selected.includes(item)){
-  //             setColor('cyan-900')
-  //     }
-  //     else
-  //     setColor('amber-900')
-  //   }
+ 
 
   const handleIndividualSelection = (item) => {
     console.log("passed item", item);
+    item.selectedState=true;
 
     if (selected.includes(item.id)) {
       return setSelected((items) => items.filter((el) => el !== item.id));
@@ -77,13 +71,22 @@ export default function RouletteTable() {
       selected.push(item.num);
     }
 
-    toggleColor();
+    // toggleColor();
+    toggleIndvColor();
   };
+
+  const toggleIndvColor = (item) => {
+    console.log(selected, 'hello1312')
+    selected.forEach(element => {
+        setColor('cyan-300')
+        
+    });
+  }
 
   const toggleColor = (item) => {
     if (color === "cyan-900") {
-      setColor("amber-300");
-    } else if (color === "amber-300") {
+      setColor("cyan-300");
+    } else if (color === "cyan-300") {
       setColor("cyan-900");
       //   setSelected([]);
     }
@@ -141,11 +144,11 @@ export default function RouletteTable() {
   };
 
   useEffect(() => {
-    console.log("HELOO");
-    //    handleIndividualSelection();
+
     // selected.push(individualArray.num);
     console.log("selected arraaaayy", selected);
-    toggleColor();
+    // toggleIndvColor();
+    toggleColor()
   }, [selected]);
 
   return (
@@ -167,7 +170,7 @@ export default function RouletteTable() {
                 <div
                   className={
                     selected.includes(item.num)
-                      ? `box-boder  p-4 border-slate-500 bg-${item.color}`
+                      ? `box-boder  p-4 border-slate-500 bg-${color}`
                       : `box-boder  p-4  border-slate-500 bg-cyan-900`
                   }
                 >
