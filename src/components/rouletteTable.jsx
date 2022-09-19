@@ -161,8 +161,8 @@ export default function RouletteTable() {
                     </div>
                 </div>
                 <div className=" flex flex-row ">
-                    <div className=" box-border h-70  p-2 border-2  ">
-                        <div className="grid gap-2 grid-cols-1">
+                    <div className=" box-border h-70  p-2   ">
+                        <div className="grid gap-4 grid-cols-1">
                             <div className="box-boder  text-center p-2 border-slate-500 bg-cyan-900 ">
                                 <button onClick={handleFirstRowElements}>
                                     <div>
