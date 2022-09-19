@@ -282,12 +282,12 @@ export default function RouletteTable() {
                 </div>{" "}
             </div>
             <button onClick={play}>
-                <div className="box-boder  p-4 border-slate-500 bg-cyan-900  text-center ">
+                <div className="box-boder mt-3  p-4 border-slate-500 bg-cyan-900  text-center ">
                     <h1 className="text-3xl p-2 text-white">PLAY</h1>{" "}
                 </div>
             </button>
             <button onClick={reset}>
-                <div className="box-boder  p-4 border-slate-500 bg-cyan-900  text-center ">
+                <div className="box-boder  p-4 mt-3 border-slate-500 bg-cyan-900  text-center ">
                     <h1 className="text-3xl p-2 text-white">RESET</h1>{" "}
                 </div>
             </button>

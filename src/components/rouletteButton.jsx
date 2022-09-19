@@ -39,7 +39,7 @@ export default function RouletteButton({
         <div
             className={
                 isSelected
-                    ? `box-boder  p-4 border-slate-500 bg-cyan-300`
+                    ? `box-boder  p-4 border-slate-500 bg-amber-300`
                     : `box-boder  p-4  border-slate-500 bg-cyan-900`
             }
         >
