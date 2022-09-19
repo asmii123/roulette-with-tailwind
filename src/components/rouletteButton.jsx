@@ -55,7 +55,7 @@ export default function RouletteButton({
                     onClick={updateSelectedPosition}
                     color={isSelected ? "amber-300" : "cyan-900"}
                 >
-                    <h1 className="text-3xl p-2 text-white">{id}</h1>
+                    <h1 className="text-sm p-2 text-white">{id}</h1>
                     {/* {id} */}
                 </button>
             </div>
