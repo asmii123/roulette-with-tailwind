@@ -254,7 +254,7 @@ export default function RouletteTable() {
                                     <div className="box-border  bg-black ">
                                         <h1 className="text-sm p-2 text-white">
                                             {" "}
-                                            BLACK{" "}
+                                            Black{" "}
                                         </h1>
                                     </div>
                                 </div>
@@ -282,12 +282,12 @@ export default function RouletteTable() {
                 </div>{" "}
             </div>
             <button onClick={play}>
-                <div className="box-boder mt-3  p-2 border-slate-500 bg-green-700  text-center ">
+                <div className="box-boder mt-3  p-2 border-slate-500 bg-green-700  text-center hover:bg-lime-600 ">
                     <h1 className="text-sm p-2 text-white">PLAY</h1>{" "}
                 </div>
             </button>
             <button onClick={reset}>
-                <div className="box-boder  p-2 mt-3 border-slate-500 bg-yellow-700  text-center ">
+                <div className="box-boder  p-2 mt-3 border-slate-500 bg-yellow-700  text-center hover:bg-yellow-500 ">
                     <h1 className="text-sm p-2 text-white">RESET</h1>{" "}
                 </div>
             </button>
