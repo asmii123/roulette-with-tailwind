@@ -11,6 +11,20 @@
 //   const red = [
 //     1, 3, 5, 7, 9, 12, 14, 16, 18, 19, 21, 23, 25, 27, 30, 32, 34, 36,
 //   ];
+// const handle1st12 = (e) => {
+//     let f12 = [1, 2, 3,4, 13,14, 15,16, 25,26, 27,28]
+//     setSelected(f12);
+//     toggleColor();
+//   };
+
+//   const handle2nd12 = (e) => {
+//     setSelected([5,6,7,8,17, 18, 19, 20,29, 30, 31, 32,]);
+//     toggleColor();
+//   };
+//   const handle3rd12 = (e) => {
+//     setSelected([9,10,11,12,21,22,23,24, 33, 34, 35, 36]);
+//     toggleColor();
+//   };
 
 //   return (
 //     <div className="flex flex-col items-center">

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 
+import RouletteButton from "./rouletteButton";
+
 export default function RouletteTable() {
   const [selected, setSelected] = React.useState([]);
   const [color, setColor] = React.useState("cyan-900");
@@ -72,7 +74,7 @@ export default function RouletteTable() {
     }
 
     // toggleColor();
-    toggleIndvColor();
+    toggleIndvColor(item);
   };
 
   const toggleIndvColor = (item) => {
@@ -95,17 +97,17 @@ export default function RouletteTable() {
   };
 
   const handle1st12 = (e) => {
-    let f12 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    let f12 = [1, 2, 3,4, 13,14, 15,16, 25,26, 27,28]
     setSelected(f12);
-    toggleColor();
+    toggleColor(f12);
   };
 
   const handle2nd12 = (e) => {
-    setSelected([13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]);
+    setSelected([5,6,7,8,17, 18, 19, 20,29, 30, 31, 32,]);
     toggleColor();
   };
   const handle3rd12 = (e) => {
-    setSelected([25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36]);
+    setSelected([9,10,11,12,21,22,23,24, 33, 34, 35, 36]);
     toggleColor();
   };
 
@@ -166,7 +168,7 @@ export default function RouletteTable() {
         <div className=" flex flex-row ">
           <div className=" box-border h-70  p-4 border-4  ">
             <div className="grid grid-cols-12 gap-2">
-              {numbers.map((item) => (
+              {numbers.map((item,i) => (
                 <div
                   className={
                     selected.includes(item.num)
@@ -181,6 +183,13 @@ export default function RouletteTable() {
                         : "rounded-full   text-center bg-black "
                     }
                   >
+                      {/* <RouletteButton 
+                      id={i+1}
+                      number={item.num}
+                      selectedStatus={item.selectedState}
+                      color={color}
+                      setColor={color}
+                      /> */}
                     <button
                       className="text-center"
                       key={item.id}
@@ -188,6 +197,7 @@ export default function RouletteTable() {
                     >
                       <h1 className="text-3xl p-2 text-white">{item.num}</h1>
                     </button>
+                     
                   </div>
                 </div>
               ))}
@@ -270,6 +280,7 @@ export default function RouletteTable() {
           </div>
         </div>{" "}
       </div>
+      
     </div>
   );
 }
