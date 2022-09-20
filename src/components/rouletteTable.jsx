@@ -163,7 +163,7 @@ export default function RouletteTable() {
                 <div className=" flex flex-row ">
                     <div className=" box-border h-70  p-2   ">
                         <div className="grid gap-4 grid-cols-1">
-                            <div className="box-boder  text-center p-2 border-slate-500 bg-cyan-900 ">
+                            <div className="box-boder  text-center p-2 border-slate-500 bg-cyan-900 hover:bg-cyan-600 ">
                                 <button onClick={handleFirstRowElements}>
                                     <div>
                                         <h1 className="text-sm  p-2 text-white">
@@ -172,7 +172,7 @@ export default function RouletteTable() {
                                     </div>
                                 </button>
                             </div>
-                            <div className="box-boder  text-center p-2 border-slate-500 bg-cyan-900 ">
+                            <div className="box-boder  text-center p-2 border-slate-500 bg-cyan-900  hover:bg-cyan-600 ">
                                 <button onClick={handleSecondRowElements}>
                                     <div>
                                         <h1 className="text-sm  p-2 text-white">
@@ -181,7 +181,7 @@ export default function RouletteTable() {
                                     </div>
                                 </button>
                             </div>
-                            <div className="box-boder  text-center p-2 border-slate-500 bg-cyan-900 ">
+                            <div className="box-boder  text-center p-2 border-slate-500 bg-cyan-900  hover:bg-cyan-600">
                                 <div>
                                     <button onClick={handleThirdRowElements}>
                                         <h1 className="text-sm  p-2 text-white">
@@ -198,7 +198,7 @@ export default function RouletteTable() {
                 <div className=" p-2 border-2  box-content w-full  ">
                     <div className="grid gap-5 grid-cols-3 ">
                         <button onClick={handle1st12}>
-                            <div className="box-boder  p-2 border-slate-500 bg-cyan-900 text-center ">
+                            <div className="box-boder  p-2 border-slate-500 bg-cyan-900 text-center   hover:bg-cyan-600">
                                 <h1 className="text-sm p-2 text-white ">
                                     1st 12{" "}
                                 </h1>{" "}
@@ -206,7 +206,7 @@ export default function RouletteTable() {
                         </button>
 
                         <button onClick={handle2nd12}>
-                            <div className="box-boder  p-2 border-slate-500 bg-cyan-900  text-center ">
+                            <div className="box-boder  p-2 border-slate-500 bg-cyan-900  hover:bg-cyan-600 text-center ">
                                 <h1 className="text-sm p-2 text-white">
                                     {" "}
                                     2nd 12{" "}
@@ -214,7 +214,7 @@ export default function RouletteTable() {
                             </div>
                         </button>
                         <button onClick={handle3rd12}>
-                            <div className="box-boder  p-2 border-slate-500 bg-cyan-900  text-center ">
+                            <div className="box-boder  p-2 border-slate-500 bg-cyan-900  hover:bg-cyan-600 text-center ">
                                 <h1 className="text-sm p-2 text-white">
                                     {" "}
                                     3rd 12{" "}
@@ -223,7 +223,7 @@ export default function RouletteTable() {
                         </button>
                         <div className="grid  grid-cols-2 gap-2">
                             <button onClick={handle1to18}>
-                                <div className="box-boder  p-2 border-slate-500 bg-cyan-900  text-center  ">
+                                <div className="box-boder  p-2 border-slate-500 bg-cyan-900   hover:bg-cyan-600 text-center  ">
                                     <h1 className="text-sm p-2 text-white">
                                         {" "}
                                         1 to 18{" "}
@@ -231,7 +231,7 @@ export default function RouletteTable() {
                                 </div>
                             </button>
                             <button onClick={handleEven}>
-                                <div className="box-boder  p-2 border-slate-500 bg-cyan-900  text-center ">
+                                <div className="box-boder  p-2 border-slate-500 bg-cyan-900  hover:bg-cyan-600 text-center ">
                                     <h1 className="text-sm p-2 text-white">
                                         {" "}
                                         EVEN{" "}
@@ -241,8 +241,8 @@ export default function RouletteTable() {
                         </div>
                         <div className="grid  grid-cols-2 gap-2">
                             <button onClick={handleRed}>
-                                <div className="box-boder  p-2 border-slate-500 bg-cyan-900  text-center ">
-                                    <div className="box-border bg-red-600 ">
+                                <div className="box-boder  p-2 border-slate-500 bg-cyan-900 text-center ">
+                                    <div className="box-border bg-red-600  hover:bg-red-500 ">
                                         <h1 className="text-sm p-2 text-white">
                                             Red{" "}
                                         </h1>{" "}
@@ -251,7 +251,7 @@ export default function RouletteTable() {
                             </button>
                             <button onClick={handleBlack}>
                                 <div className="box-boder  p-2 border-slate-500 bg-cyan-900  text-center ">
-                                    <div className="box-border  bg-black ">
+                                    <div className="box-border  bg-black hover:bg-slate-800">
                                         <h1 className="text-sm p-2 text-white">
                                             {" "}
                                             Black{" "}
@@ -262,7 +262,7 @@ export default function RouletteTable() {
                         </div>
                         <div className="grid  grid-cols-2 gap-2">
                             <button onClick={handleOdd}>
-                                <div className="box-boder  p-2 border-slate-500 bg-cyan-900  text-center ">
+                                <div className="box-boder  p-2 border-slate-500 bg-cyan-900  hover:bg-cyan-600 text-center ">
                                     <h1 className="text-sm p-2 text-white">
                                         {" "}
                                         ODD
@@ -270,7 +270,7 @@ export default function RouletteTable() {
                                 </div>
                             </button>
                             <button onClick={handle19to36}>
-                                <div className="box-boder  p-2 border-slate-500 bg-cyan-900  text-center ">
+                                <div className="box-boder  p-2 border-slate-500 bg-cyan-900  hover:bg-cyan-600 text-center ">
                                     <h1 className="text-sm p-2 text-white">
                                         {" "}
                                         19 to 36
